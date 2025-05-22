@@ -6,7 +6,28 @@
   --font-poppins: "Poppins", sans-serif;
   --color-hover: grey;
   --color-praragraph: #555555;
+  --color-dark-grey: #353535;
   --color-underline-hover: #b5b5b5;
+  --animate-fadeIn: fadeIn ease 4s;
+  --animate-typewrite: typewrite 3s steps(24) 1s 1 normal both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes typewrite {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
 
 html {
@@ -15,7 +36,7 @@ html {
 
 a,
 .btn {
-  transition: all 300ms ease;
+  @apply transition-all ease-in duration-300;
 }
 
 .nav-link:hover {
@@ -24,4 +45,20 @@ a,
 
 .menu-link {
   @apply block p-2 text-right text-2xl transition-all ease-in-out duration-300;
+}
+
+.menu-link:hover {
+  @apply text-hover transform scale-110;
+}
+
+section {
+  @apply pt-[4vh] h-[80vh] mx-40 min-h-fit box-border;
+}
+
+.btn {
+  @apply w-fit font-semibold p-4 text-sm rounded-4xl cursor-pointer;
+}
+
+.icon {
+  @apply cursor-pointer h-8;
 }

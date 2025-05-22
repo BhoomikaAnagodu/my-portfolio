@@ -47,9 +47,19 @@ const Header = () => {
             className="flex flex-col justify-between w-8 h-6 cursor-pointer transition-all ease-in-out duration-300"
             onClick={toggleMenu}
           >
-            <span className="w-full h-1 bg-black"></span>
-            <span className="w-full h-1 bg-black"></span>
-            <span className="w-full h-1 bg-black"></span>
+            <span
+              className={`${
+                openMenu ? "transform rotate-45 translate-y-2.5" : "opacity-100"
+              } w-full h-1 bg-black`}
+            ></span>
+            <span
+              className={`${openMenu ? "opacity-0" : ""} w-full h-1 bg-black`}
+            ></span>
+            <span
+              className={`${
+                openMenu ? "transform -rotate-45 -translate-y-2.5" : ""
+              } w-full h-1 bg-black`}
+            ></span>
           </div>
           {openMenu && (
             <ul className="absolute top-[100%] right-0 bg-white w-fit max-h-80 overflow-hidden py-2 transition-all ease-in-out duration-300">
