@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 @theme {
+  --breakpoint-xxs: 10rem;
   --breakpoint-xs: 30rem;
   --breakpoint-2xl: 100rem;
   --font-poppins: "Poppins", sans-serif;
@@ -39,12 +40,16 @@ a,
   @apply transition-all ease-in duration-300;
 }
 
+.main-container {
+  @apply xxs:w-full xs:w-full md:w-full lg:w-10/12 xl:w-10/12;
+}
+
 .nav-link:hover {
   @apply text-hover underline decoration-underline-hover underline-offset-16;
 }
 
 .menu-link {
-  @apply block p-2 text-right text-2xl transition-all ease-in-out duration-300;
+  @apply block p-1 md:p-2 lg:p-2 xl:p-2 text-right xxs:text-lg xs:text-lg sm:text-lg md:text-xl lg:text-2xl transition-all ease-in-out duration-300;
 }
 
 .menu-link:hover {
@@ -52,13 +57,13 @@ a,
 }
 
 section {
-  @apply pt-[4vh] h-[80vh] mx-40 min-h-fit box-border;
+  @apply pt-[4dvh] h-[60dvh] md:h-[75dvh] xl:h-[80dvh] xs:mx-15 sm:mx-20 md:mx-15 lg:mx-[78px] xl:mx-30 min-h-fit box-border;
 }
 
 .btn {
-  @apply w-fit font-semibold p-4 text-sm rounded-4xl cursor-pointer;
+  @apply w-fit font-semibold p-3 lg:p-3.5 xl:p-4 text-xs lg:text-sm rounded-4xl cursor-pointer;
 }
 
 .icon {
-  @apply cursor-pointer h-8;
+  @apply cursor-pointer h-6 lg:h-7 xl:h-8;
 }
