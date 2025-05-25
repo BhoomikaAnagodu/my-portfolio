@@ -1,104 +1,111 @@
-import { useState } from "react";
-import NavLinks from "./NavLinks";
+import { useEffect, useRef, useState } from "react";
+
 import { scrollToElement } from "../utils/utils";
+import { NAV_ITEMS } from "../utils/constant";
+
+import Hamburger_Menu from "../assets/hamburger-menu.png";
 
 const Header = () => {
   const [openMenu, setOpenMenu] = useState(false);
+  const [activeNavItem, setActiveNavItem] = useState<string>("home");
+
+  const menuRef = useRef<HTMLDivElement>(null);
+
   const toggleMenu = () => {
     setOpenMenu((prev) => !prev);
   };
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        openMenu &&
+        menuRef.current &&
+        !menuRef.current.contains(event.target as Node)
+      ) {
+        setOpenMenu(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [openMenu]);
+
   return (
-    <>
-      <nav
-        id="desktop-nav"
-        className="hidden lg:flex xl:flex 2xl:flex justify-around items-center h-[17dvh] "
-      >
-        <div className="text-xl md:text-2xl lg:text-3xl xl:text-3xl cursor-default">
-          Bhoomika Anagodu
-        </div>
-        <NavLinks />
-      </nav>
-      <nav
-        id="hamburger-nav"
-        className="flex justify-around items-center lg:hidden xl:hidden 2xl:hidden h-[17dvh]"
-      >
-        <div className="xxs:text-2xl xs:text-2xl md:text-3xl lg:text-3xl xl:text-4xl cursor-default">
-          Bhoomika Anagodu
-        </div>
-        <div className="relative inline-block">
-          <div
-            className="flex flex-col justify-between w-7 h-5 md:w-8 md:h-6 cursor-pointer transition-all ease-in-out duration-300"
-            onClick={toggleMenu}
-          >
-            <span
-              className={`${
-                openMenu
-                  ? "transform rotate-45 translate-y-2 md:translate-y-[11px]"
-                  : "opacity-100"
-              } w-full h-0.5 bg-black`}
-            ></span>
-            <span
-              className={`${openMenu ? "opacity-0" : ""} w-full h-0.5 bg-black`}
-            ></span>
-            <span
-              className={`${
-                openMenu
-                  ? "transform -rotate-45 -translate-y-[9px] md:-translate-y-[10px]"
-                  : ""
-              } w-full h-0.5 bg-black`}
-            ></span>
+    <div className="fixed top-0 bg-white w-full z-110 shadow-header">
+      <div className="main-container mx-auto">
+        {/* Desktop View Header */}
+        <nav
+          id="desktop-nav"
+          className="hidden lg:flex justify-between items-center xl:px-8 lg:h-18 xl:h-20"
+        >
+          <div className="font-allura text-dark-brown lg:text-[28px] xl:text-3xl cursor-default">
+            Bhoomika Anagodu
           </div>
-          {openMenu && (
-            <ul className="absolute top-[100%] right-0 bg-transparent w-fit max-h-80 overflow-hidden py-2 transition-all ease-in-out duration-300">
-              <li>
-                <p
-                  className="menu-link cursor-pointer"
-                  onClick={() => {
-                    scrollToElement("about");
-                    toggleMenu();
-                  }}
-                >
-                  About
-                </p>
-              </li>
-              <li>
-                <p
-                  className="menu-link cursor-pointer"
-                  onClick={() => {
-                    scrollToElement("experience");
-                    toggleMenu();
-                  }}
-                >
-                  Experience
-                </p>
-              </li>
-              <li>
-                <p
-                  className="menu-link cursor-pointer"
-                  onClick={() => {
-                    scrollToElement("projects");
-                    toggleMenu();
-                  }}
-                >
-                  Project
-                </p>
-              </li>
-              <li>
-                <p
-                  className="menu-link cursor-pointer"
-                  onClick={() => {
-                    scrollToElement("contact");
-                    toggleMenu();
-                  }}
-                >
-                  Contact
-                </p>
-              </li>
-            </ul>
-          )}
-        </div>
-      </nav>
-    </>
+          <ul className="lg:flex items-center lg:gap-6 xl:gap-8 nav-list">
+            {NAV_ITEMS.map((item) => {
+              return (
+                <li className="nav-link cursor-pointer">
+                  <p
+                    className={
+                      activeNavItem === item.toLowerCase()
+                        ? "text-brown underline decoration-brown-600 underline-offset-10"
+                        : ""
+                    }
+                    onClick={() => {
+                      setActiveNavItem(item.toLowerCase());
+                      scrollToElement(item.toLocaleLowerCase());
+                    }}
+                  >
+                    {item}
+                  </p>
+                </li>
+              );
+            })}
+          </ul>
+        </nav>
+
+        {/* Mobile/iPad View Header */}
+        <nav
+          id="hamburger-nav"
+          className="relative flex justify-between items-center w-11/12 md:w-10/12 mx-auto lg:hidden xl:hidden h-12 md:h-16"
+        >
+          <div className="font-allura text-dark-brown xxs:text-xl xs:text-2xl md:text-3xl cursor-default">
+            Bhoomi
+          </div>
+          <div className="relative" ref={menuRef}>
+            <div className="w-7 md:w-8 cursor-pointer" onClick={toggleMenu}>
+              <img src={Hamburger_Menu} />
+            </div>
+            {openMenu && (
+              <ul className="absolute right-0 bg-white shadow-menu rounded-xl w-fit overflow-hidden xxs:my-4 xs:my-4 md:my-6 z-120 p-2">
+                {NAV_ITEMS.map((item) => {
+                  return (
+                    <li className="menu-link cursor-pointer">
+                      <p
+                        className={`${
+                          activeNavItem === item.toLowerCase()
+                            ? "active-menu-link"
+                            : ""
+                        } px-2`}
+                        onClick={() => {
+                          setActiveNavItem(item.toLowerCase());
+                          scrollToElement(item.toLowerCase());
+                          toggleMenu();
+                        }}
+                      >
+                        {item}
+                      </p>
+                    </li>
+                  );
+                })}
+              </ul>
+            )}
+          </div>
+        </nav>
+      </div>
+    </div>
   );
 };
 

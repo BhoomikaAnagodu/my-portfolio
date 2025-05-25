@@ -1,15 +1,15 @@
 import ContactInfo from "./components/ContactInfo";
-import Footer from "./components/Footer";
 import Header from "./components/Header";
 import LandingPage from "./components/LandingPage";
 
 const App = () => {
   return (
-    <div className="main-container mx-auto">
+    <div className="relative">
       <Header />
-      <LandingPage />
-      <ContactInfo />
-      <Footer />
+      <div className="snap-y snap-mandatory overflow-y-scroll section-height">
+        <LandingPage />
+        <ContactInfo />
+      </div>
     </div>
   );
 };

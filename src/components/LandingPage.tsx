@@ -1,60 +1,69 @@
 import ProfilePic from "../assets/profile_pic.png";
 import LinkedinIcon from "../assets/linkedin.png";
 import GitHubIcon from "../assets/github.png";
-import BhoomikaA_Resume from "../assets/Bhoomika_A.pdf";
-import { scrollToElement } from "../utils/utils";
+// import BhoomikaA_Resume from "../assets/Bhoomika_A.pdf";
+// import { scrollToElement } from "../utils/utils";
 
 const LandingPage = () => {
   return (
-    <section className="block lg:flex justify-center lg:gap-11 xl:gap-16">
-      <div className="xxs:w-[37vw] xs:w-[35vw] xs:h-[35vw] sm:w-[37vw] sm:h-[37vw] md:w-[32vw] md:h-[32vw] lg:w-[34vw] lg:h-[34vw] xl:w-100 xl:h-100 mx-auto lg:my-auto">
-        <img src={ProfilePic} alt="Bhoomika Anagodu Profile Picture" />
-      </div>
-      <div className="my-8 lg:my-0 xl:my-0 text-center self-center">
-        <p className="font-medium">Hello, I'm</p>
-        <h1 className="xxs:text-2xl xs:text-2xl sm:text-3xl md:text-3xl lg:text-3xl xl:text-5xl opacity-90 animate-fadeIn">
-          Bhoomika Anagodu
-        </h1>
-        <p className="mx-auto xxs:text-base sm:text-lg md:text-xl lg:text-xl xl:text-2xl xxs:my-1.5 sm:my-2 md:my-2 lg:my-4 xl:my-4 whitespace-nowrap overflow-hidden animate-typewrite">
-          Senior Software Engineer
-        </p>
-        <div className="flex justify-center gap-4 my-2 lg:my-0">
-          <a
-            className="btn border-2 border-dark-grey hover:bg-dark-grey hover:text-white"
-            href={BhoomikaA_Resume}
-            target="_blank"
-          >
-            Download CV
-          </a>
-          <button
-            className="btn border-2 border-dark-grey bg-dark-grey text-white"
-            onClick={() => scrollToElement("contact")}
-          >
-            Contact Info
-          </button>
+    <div className="main-container mx-auto snap-always snap-center">
+      <section id="home" className="section-height grid md:grid-cols-1 lg:flex">
+        <div className="lg:w-1/2 my-auto md:mx-auto">
+          <img
+            src={ProfilePic}
+            className="xxs:w-4/5 xs:w-3/4 md:w-3/5 lg:w-3/4 xl:w-3/4 mx-auto"
+            alt="Bhoomika Anagodu Profile Picture"
+          />
         </div>
-        <div id="socials-container" className="flex justify-center mt-4 gap-4">
-          <a
-            href="https://www.linkedin.com/in/bhoomika-anagodu/"
-            target="_blank"
-            rel="noopener noreferrer"
+        <div className="lg:w-1/2 mt-10 lg:my-auto text-center">
+          <p className="font-medium">Hello, I'm</p>
+          <h1 className="text-4xl md:text-5xl lg:text-[45px] xl:text-6xl font-semibold my-2 opacity-90 animate-fadeIn">
+            Bhoomika Anagodu
+          </h1>
+          <p className="text-lg md:text-xl xl:text-2xl font-medium my-2 mx-auto whitespace-nowrap overflow-hidden animate-typewrite text-dark-brown">
+            Senior Software Engineer
+          </p>
+          {/* <div className="flex justify-center gap-4 my-2 lg:my-6">
+            <a
+              className="btn border-2 border-zinc-800 hover:bg-zinc-800 hover:text-neutral-100"
+              href={BhoomikaA_Resume}
+              target="_blank"
+            >
+              Download CV
+            </a>
+            <button
+              className="btn border-2 border-zinc-800 bg-zinc-800 text-neutral-100"
+              onClick={() => scrollToElement("contact")}
+            >
+              Contact Info
+            </button>
+          </div> */}
+          <div
+            id="socials-container"
+            className="flex justify-center my-4 gap-4"
           >
-            <img
-              src={LinkedinIcon}
-              alt="My Linkedin Profile"
-              className="icon"
-            />
-          </a>
-          <a
-            href="https://github.com/BhoomikaAnagodu"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src={GitHubIcon} alt="My Github Profile" className="icon" />
-          </a>
+            <a
+              href="https://www.linkedin.com/in/bhoomika-anagodu/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={LinkedinIcon}
+                alt="My Linkedin Profile"
+                className="icon"
+              />
+            </a>
+            <a
+              href="https://github.com/BhoomikaAnagodu"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={GitHubIcon} alt="My Github Profile" className="icon" />
+            </a>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 };
 
