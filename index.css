@@ -77,7 +77,7 @@ a,
 }
 
 .section-height {
-  @apply h-screen;
+  @apply h-screen py-[15vh];
 }
 
 .nav-list > li {

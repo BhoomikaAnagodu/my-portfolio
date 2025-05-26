@@ -36,10 +36,12 @@ const About = () => {
         id="about"
         className="section-height text-center flex flex-col justify-center"
       >
-        <p className="font-medium xxs:text-xs sm:text-sm md:text-base">Get To Know More</p>
+        <p className="font-medium xxs:text-xs sm:text-sm md:text-base">
+          Get To Know More
+        </p>
         <h1 className="section-heading">About Me</h1>
         <div className="xl:w-11/12 mx-auto grid gap-2 lg:flex lg:gap-10 xxs:my-2 sm:my-4 md:my-6 lg:my-8">
-          <div className="w-4/5 mx-auto lg:w-1/2 text-base md:text-lg tracking-wide text-left">
+          <div className="w-11/12 md:w-4/5 mx-auto lg:w-1/2 text-base md:text-lg tracking-wide text-left">
             <p className="my-4">
               Software Developer with a passion for creating high-performance,
               user-focused applications.
