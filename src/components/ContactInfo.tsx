@@ -9,7 +9,9 @@ const ContactInfo = () => {
         id="contact"
         className="relative section-height text-center flex flex-col justify-center"
       >
-        <p className="font-medium xxs:text-sm md:text-base">Get in Touch</p>
+        <p className="font-medium xxs:text-xs sm:text-sm md:text-base">
+          Get in Touch
+        </p>
         <h1 className="section-heading block my-2 lg:my-4">Contact Me</h1>
         <div className="block md:flex md:justify-center w-fit border-1 border-dark-brown rounded-2xl p-2 px-8 mx-auto xxs:my-4 md:my-6 lg:my-8">
           <div className="flex items-center justify-center gap-2 m-2 md:m-4">

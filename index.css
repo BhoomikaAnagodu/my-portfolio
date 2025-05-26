@@ -17,6 +17,8 @@
 
   --animate-fadeIn: fadeIn ease 4s;
   --animate-typewrite: typewrite 3s steps(24) 1s 1 normal both;
+  --animate-fadeInRight: fadeInRight ease 2s;
+  --animate-fadeInTop: fadeInTop ease 2s;
 
   --shadow-header: rgba(123, 63, 0, 0.1) 0px 4px 6px -1px,
     rgba(123, 63, 0, 0.06) 0px 2px 4px -1px;
@@ -41,6 +43,26 @@
   }
 }
 
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(300px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInTop {
+  from {
+    opacity: 0;
+    transform: translateY(300px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -59,7 +81,7 @@ a,
 }
 
 .nav-list > li {
-  @apply lg:text-lg xl:text-xl;
+  @apply lg:text-lg xl:text-lg;
 }
 
 .nav-link:hover {
@@ -86,7 +108,8 @@ section {
   @apply text-3xl md:text-4xl xl:text-5xl font-medium;
 }
 
-.contact-link:hover {
+.contact-link:hover,
+.contact-link:focus {
   @apply underline text-dark-brown decoration-dark-brown underline-offset-10;
 }
 

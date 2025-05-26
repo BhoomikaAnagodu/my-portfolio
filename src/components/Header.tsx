@@ -7,7 +7,9 @@ import Hamburger_Menu from "../assets/hamburger-menu.png";
 
 const Header = () => {
   const [openMenu, setOpenMenu] = useState(false);
-  const [activeNavItem, setActiveNavItem] = useState<string>("home");
+  const [activeNavItem, setActiveNavItem] = useState<string>(
+    NAV_ITEMS[0].value
+  );
 
   const menuRef = useRef<HTMLDivElement>(null);
 
@@ -32,6 +34,35 @@ const Header = () => {
     };
   }, [openMenu]);
 
+  useEffect(() => {
+    const scrollContainer = document.getElementById("scroll-container");
+
+    const handleSnapScroll = () => {
+      const threshold = window.innerHeight / 2;
+
+      for (const item of NAV_ITEMS) {
+        const section = document.getElementById(item.value);
+        if (section) {
+          const rect = section.getBoundingClientRect();
+          if (rect.top >= 0 && rect.top < threshold) {
+            setActiveNavItem(item.value);
+            break;
+          }
+        }
+      }
+    };
+
+    if (scrollContainer) {
+      scrollContainer.addEventListener("scroll", handleSnapScroll);
+    }
+
+    return () => {
+      if (scrollContainer) {
+        scrollContainer.removeEventListener("scroll", handleSnapScroll);
+      }
+    };
+  }, []);
+
   return (
     <div className="fixed top-0 bg-white w-full z-110 shadow-header">
       <div className="main-container mx-auto">
@@ -46,19 +77,19 @@ const Header = () => {
           <ul className="lg:flex items-center lg:gap-6 xl:gap-8 nav-list">
             {NAV_ITEMS.map((item) => {
               return (
-                <li className="nav-link cursor-pointer">
+                <li key={item.label} className="nav-link cursor-pointer">
                   <p
                     className={
-                      activeNavItem === item.toLowerCase()
+                      activeNavItem === item.value
                         ? "text-brown underline decoration-brown-600 underline-offset-10"
                         : ""
                     }
                     onClick={() => {
-                      setActiveNavItem(item.toLowerCase());
-                      scrollToElement(item.toLocaleLowerCase());
+                      setActiveNavItem(item.value);
+                      scrollToElement(item.value);
                     }}
                   >
-                    {item}
+                    {item.label}
                   </p>
                 </li>
               );
@@ -82,20 +113,18 @@ const Header = () => {
               <ul className="absolute right-0 bg-white shadow-menu rounded-xl w-fit overflow-hidden xxs:my-4 xs:my-4 md:my-6 z-120 p-2">
                 {NAV_ITEMS.map((item) => {
                   return (
-                    <li className="menu-link cursor-pointer">
+                    <li key={item.label} className="menu-link cursor-pointer">
                       <p
                         className={`${
-                          activeNavItem === item.toLowerCase()
-                            ? "active-menu-link"
-                            : ""
+                          activeNavItem === item.value ? "active-menu-link" : ""
                         } px-2`}
                         onClick={() => {
-                          setActiveNavItem(item.toLowerCase());
-                          scrollToElement(item.toLowerCase());
+                          setActiveNavItem(item.value);
+                          scrollToElement(item.value);
                           toggleMenu();
                         }}
                       >
-                        {item}
+                        {item.label}
                       </p>
                     </li>
                   );
