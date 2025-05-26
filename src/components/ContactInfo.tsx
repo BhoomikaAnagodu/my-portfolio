@@ -23,7 +23,7 @@ const ContactInfo = () => {
               <a
                 href="https://www.linkedin.com/in/bhoomika-anagodu/"
                 target="_blank"
-                className="no-underline"
+                className="no-underline focus:no-underline"
               >
                 Bhoomika A
               </a>
@@ -38,7 +38,7 @@ const ContactInfo = () => {
             <p className="contact-link text-sm md:text-base my-2 md:my-0">
               <a
                 href="mailto:bhoomika.anagodu@gmail.com"
-                className="no-underline"
+                className="no-underline focus:no-underline"
               >
                 bhoomika.anagodu@gmail.com
               </a>
