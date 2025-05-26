@@ -64,7 +64,7 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: [ auto smooth];
 }
 
 a,
@@ -77,7 +77,7 @@ a,
 }
 
 .section-height {
-  @apply h-screen py-[15vh];
+  @apply min-h-[80vh] lg:h-screen;
 }
 
 .nav-list > li {

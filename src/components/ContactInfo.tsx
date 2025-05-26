@@ -1,13 +1,12 @@
 import EmailIcon from "../assets/email.png";
 import LinkedInIcon from "../assets/linkedin.png";
-import Footer from "./Footer";
 
 const ContactInfo = () => {
   return (
     <div className="main-container mx-auto snap-always snap-center">
       <section
         id="contact"
-        className="relative section-height text-center flex flex-col justify-center"
+        className="relative min-h-[80vh] lg:min-h-[85vh] text-center flex flex-col justify-center"
       >
         <p className="font-medium xxs:text-xs sm:text-sm md:text-base">
           Get in Touch
@@ -42,7 +41,6 @@ const ContactInfo = () => {
             </p>
           </div>
         </div>
-        <Footer />
       </section>
     </div>
   );

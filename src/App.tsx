@@ -1,5 +1,6 @@
 import About from "./components/About";
 import ContactInfo from "./components/ContactInfo";
+import Footer from "./components/Footer";
 import Header from "./components/Header";
 import LandingPage from "./components/LandingPage";
 
@@ -9,11 +10,14 @@ const App = () => {
       <Header />
       <div
         id="scroll-container"
-        className="snap-y snap-mandatory overflow-y-scroll section-height"
+        className="overflow-y-auto snap-none lg:snap-y lg:snap-mandatory py-[15vh] section-height"
       >
         <LandingPage />
         <About />
         <ContactInfo />
+        <div className="text-center py-4 w-full">
+          <Footer />
+        </div>
       </div>
     </div>
   );
