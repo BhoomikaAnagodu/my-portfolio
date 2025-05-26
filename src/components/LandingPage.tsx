@@ -5,7 +5,10 @@ import GitHubIcon from "../assets/github.png";
 const LandingPage = () => {
   return (
     <div className="main-container mx-auto snap-always snap-center">
-      <section id="home" className="section-height grid md:grid-cols-1 lg:flex">
+      <section
+        id="home"
+        className="my-[10vh] section-height grid md:grid-cols-1 lg:flex"
+      >
         <div className="lg:w-1/2 my-auto md:mx-auto">
           <img
             src={ProfilePic}

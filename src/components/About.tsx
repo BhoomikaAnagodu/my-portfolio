@@ -36,7 +36,7 @@ const About = () => {
         id="about"
         className="section-height text-center flex flex-col justify-center"
       >
-        <p className="font-medium xxs:text-xs sm:text-sm md:text-base">
+        <p className="font-medium xxs:text-xs sm:text-sm md:text-base my-1 lg:my-2">
           Get To Know More
         </p>
         <h1 className="section-heading">About Me</h1>
@@ -56,7 +56,7 @@ const About = () => {
             </p>
             <p className="my-4">Let’s build something great together!</p>
           </div>
-          <div className="w-full my-5 lg:my-0 md:w-3/4 lg:w-1/2 gap-4 md:gap-6 lg:gap-0 flex flex-col items-center justify-around mx-auto">
+          <div className="w-full my-5 lg:my-0 md:w-3/4 lg:w-1/2 gap-8 lg:gap-0 flex flex-col items-center justify-around mx-auto">
             {ABOUT_CARD_ITEMS.map((items, index) => {
               const delay = `${index * 200}ms`;
               return (

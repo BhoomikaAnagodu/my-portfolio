@@ -3,6 +3,7 @@ import ContactInfo from "./components/ContactInfo";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import LandingPage from "./components/LandingPage";
+import Skills from "./components/Skills";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
       >
         <LandingPage />
         <About />
+        <Skills />
         <ContactInfo />
         <div className="text-center py-4 w-full">
           <Footer />

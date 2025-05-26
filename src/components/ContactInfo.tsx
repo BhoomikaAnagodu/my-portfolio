@@ -6,9 +6,9 @@ const ContactInfo = () => {
     <div className="main-container mx-auto snap-always snap-center">
       <section
         id="contact"
-        className="relative min-h-[80vh] lg:min-h-[85vh] text-center flex flex-col justify-center"
+        className="relative my-auto xxs:min-h-[30vh] sm:min-h-[40vh] md:min-h-[30vh] lg:min-h-[85vh] text-center flex flex-col justify-center"
       >
-        <p className="font-medium xxs:text-xs sm:text-sm md:text-base">
+        <p className="font-medium xxs:text-xs sm:text-sm md:text-base lg:my-2">
           Get in Touch
         </p>
         <h1 className="section-heading block my-2 lg:my-4">Contact Me</h1>
