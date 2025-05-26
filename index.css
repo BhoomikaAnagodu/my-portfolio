@@ -101,7 +101,7 @@ a,
 }
 
 section {
-  @apply my-auto pt-12 md:pt-16 lg:pt-18 xl:pt-20 box-border;
+  @apply my-[10vh] lg:my-auto lg:pt-18 lg:pb-0 xl:pb-0 xl:pt-20 box-border;
 }
 
 .section-heading {

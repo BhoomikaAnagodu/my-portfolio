@@ -10,7 +10,7 @@ const App = () => {
       <Header />
       <div
         id="scroll-container"
-        className="overflow-y-auto snap-none lg:snap-y lg:snap-mandatory py-[15vh] section-height"
+        className="overflow-y-auto snap-none lg:snap-y lg:snap-mandatory section-height"
       >
         <LandingPage />
         <About />

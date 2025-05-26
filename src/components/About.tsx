@@ -56,7 +56,7 @@ const About = () => {
             </p>
             <p className="my-4">Let’s build something great together!</p>
           </div>
-          <div className="w-full md:w-3/4 lg:w-1/2 gap-4 md:gap-6 lg:gap-0  flex flex-col items-center justify-around mx-auto">
+          <div className="w-full my-5 lg:my-0 md:w-3/4 lg:w-1/2 gap-4 md:gap-6 lg:gap-0 flex flex-col items-center justify-around mx-auto">
             {ABOUT_CARD_ITEMS.map((items) => {
               return (
                 <div
