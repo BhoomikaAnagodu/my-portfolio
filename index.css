@@ -17,8 +17,8 @@
 
   --animate-fadeIn: fadeIn ease 4s;
   --animate-typewrite: typewrite 3s steps(24) 1s 1 normal both;
-  --animate-fadeInRight: fadeInRight ease-out forwards 0.8s;
-  --animate-fadeInTop: fadeInTop ease-out forwards 0.8s;
+  --animate-fadeInRight: fadeInRight ease-out forwards 1s;
+  --animate-fadeInTop: fadeInTop ease-out forwards 1s;
 
   --shadow-header: rgba(123, 63, 0, 0.1) 0px 4px 6px -1px,
     rgba(123, 63, 0, 0.06) 0px 2px 4px -1px;
@@ -46,7 +46,7 @@
 @keyframes fadeInRight {
   from {
     opacity: 0;
-    transform: translateX(200px);
+    transform: translateX(80px);
   }
   to {
     opacity: 1;
@@ -57,7 +57,7 @@
 @keyframes fadeInTop {
   from {
     opacity: 0;
-    transform: translateY(100px);
+    transform: translateY(80px);
   }
   to {
     opacity: 1;
