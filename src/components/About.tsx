@@ -57,13 +57,14 @@ const About = () => {
             <p className="my-4">Let’s build something great together!</p>
           </div>
           <div className="w-full my-5 lg:my-0 md:w-3/4 lg:w-1/2 gap-4 md:gap-6 lg:gap-0 flex flex-col items-center justify-around mx-auto">
-            {ABOUT_CARD_ITEMS.map((items) => {
+            {ABOUT_CARD_ITEMS.map((items, index) => {
+              const delay = `${index * 200}ms`;
               return (
                 <div
                   key={items.heading}
                   className={`w-10/12 opacity-90 ${
                     showAnimation
-                      ? "animate-fadeInTop lg:animate-fadeInRight"
+                      ? `animate-fadeInTop delay-[${delay}] lg:animate-fadeInRight`
                       : "opacity-0"
                   } text-center bg-neutral-50 shadow-menu hover:shadow-lg hover:shadow-brown-400 transition-shadow duration-300 rounded-xl p-4`}
                 >

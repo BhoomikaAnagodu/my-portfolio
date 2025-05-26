@@ -35,7 +35,10 @@ const Header = () => {
   }, [openMenu]);
 
   useEffect(() => {
-    const scrollContainer = document.getElementById("scroll-container");
+    const isMobile = window.innerWidth < 1024;
+    const scrollTarget = isMobile
+      ? window
+      : document.getElementById("scroll-container");
 
     const handleSnapScroll = () => {
       const threshold = window.innerHeight / 2;
@@ -52,13 +55,13 @@ const Header = () => {
       }
     };
 
-    if (scrollContainer) {
-      scrollContainer.addEventListener("scroll", handleSnapScroll);
+    if (scrollTarget) {
+      scrollTarget.addEventListener("scroll", handleSnapScroll);
     }
 
     return () => {
-      if (scrollContainer) {
-        scrollContainer.removeEventListener("scroll", handleSnapScroll);
+      if (scrollTarget) {
+        scrollTarget.removeEventListener("scroll", handleSnapScroll);
       }
     };
   }, []);
