@@ -34,9 +34,9 @@ const About = () => {
     >
       <section
         id="about"
-        className="section-height text-center flex flex-col justify-center"
+        className="py-[8vh] section-height text-center flex flex-col justify-center"
       >
-        <p className="font-medium xxs:text-xs sm:text-sm md:text-base my-1 lg:my-2">
+        <p className="font-medium xxs:text-xs sm:text-sm md:text-base my-1">
           Get To Know More
         </p>
         <h1 className="section-heading">About Me</h1>
@@ -66,7 +66,7 @@ const About = () => {
                     showAnimation
                       ? `animate-fadeInTop delay-[${delay}] lg:animate-fadeInRight`
                       : "opacity-0"
-                  } text-center bg-neutral-50 shadow-menu hover:shadow-lg hover:shadow-brown-400 transition-shadow duration-300 rounded-xl p-4`}
+                  } text-center bg-neutral-50 shadow-menu hover:shadow-lg hover:shadow-wineberry-400 transition-shadow duration-300 rounded-xl p-4`}
                 >
                   <div className="flex items-center">
                     <div className="w-2/12">
@@ -77,7 +77,7 @@ const About = () => {
                       />
                     </div>
                     <div className="w-10/12 text-left">
-                      <h3 className="font-semibold text-dark-brown">
+                      <h3 className="font-semibold text-wineberry-950">
                         {items.heading}
                       </h3>
                       <p className="text-sm">{items.desc}</p>

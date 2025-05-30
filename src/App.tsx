@@ -1,5 +1,6 @@
 import About from "./components/About";
 import ContactInfo from "./components/ContactInfo";
+import Experience from "./components/Experience";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import LandingPage from "./components/LandingPage";
@@ -15,6 +16,7 @@ const App = () => {
       >
         <LandingPage />
         <About />
+        <Experience />
         <Skills />
         <ContactInfo />
         <div className="text-center py-4 w-full">

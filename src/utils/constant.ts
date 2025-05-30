@@ -144,3 +144,43 @@ export const TECH_STACK = [
     name: "Ant Design",
   },
 ];
+
+export const EXPERIENCE_LIST = [
+  {
+    designation: "Senior Software Engineer",
+    company_name: "Walmart Global Technology Services India Private Limited",
+    location: "Bangalore",
+    description: `<p><span class="font-medium">Led feature development and architectural improvements</span> on the onboarding platform after transitioning to a full-time role. Took greater ownership of core frontend modules, drove technical decisions around <span class="font-medium">code quality, reusability,</span> and <span class="font-medium">scalability,</span> and mentored newer developers on best practices in <span class="font-medium">React, TypeScript,</span> and <span class="font-medium">Tailwind CSS.</span> Actively collaborated in cross-functional teams to align UI/UX decisions with business requirements. Improved build performance and enhanced accessibility compliance, contributing to a more maintainable and robust product ecosystem.</p>`,
+    timeline: "Mar 2024 - Dec 2024",
+  },
+  {
+    designation:
+      "Frontend Developer (as a Vendor through Xebia IT Architects India Private Ltd)",
+    company_name: "Walmart Global Technology Services India Private Limited",
+    location: "Bangalore",
+    description: `<p><span class="font-medium">Built and maintained a scalable onboarding platform</span> using <span class="font-medium">Micro Frontend architecture</span> to support modular, multi-team development. As a vendor engineer, I contributed to the platform’s foundational structure and helped deliver seamless, end-to-end onboarding flows. Developed <span class="font-medium">accessible, responsive UIs</span> using <span class="font-medium">React, TypeScript,</span> and <span class="font-medium">component-driven development,</span> with a strong focus on performance, reusability, and cross-service integration. Collaborated closely with design, product, and engineering teams to ensure alignment across teams and business goals.</p>`,
+    timeline: "Apr 2022 - Mar 2024",
+  },
+  {
+    designation: "Consultant (as Frontend Developer)",
+    company_name: "Xebia IT Architects India Private Limited",
+    location: "Bangalore",
+    description: `<p>As a Frontend Developer, built <span class="font-medium">reusable React components</span> using <span class="font-medium">TypeScript</span> and <span class="font-medium">Redux</span>. Delivered key features such as a <span class="font-medium">global calendar</span> to enhance <span class="font-medium">user engagement</span>, optimized <span class="font-medium">application performance</span>, and fixed <span class="font-medium">critical bugs</span>. Mentored <span class="font-medium">junior developers</span> and contributed to efficient, high-quality product delivery in <span class="font-medium">Agile environments</span>.</p>`,
+    timeline: "Nov 2021 - Mar 2024",
+  },
+  {
+    designation: "React Developer",
+    company_name: "3Embed Software Technologies Private Limited",
+    location: "Bangalore",
+    description: `<p>Developed <span class="font-medium">flexible</span> and <span class="font-medium">well-structured user interfaces</span> using <span class="font-medium">React.js</span> and <span class="font-medium">Next.js</span> frameworks, creating <span class="font-medium">reusable components</span> with <span class="font-medium">Material UI</span>, <span class="font-medium">Ant Design</span>, and custom <span class="font-medium">CSS</span>. Implemented advanced features such as <span class="font-medium">multi-selection filters</span>, <span class="font-medium">server-side rendering</span>, <span class="font-medium">dynamic routing</span>, and <span class="font-medium">calendar scheduling</span>. Collaborated with clients to gather requirements and contributed to <span class="font-medium">project planning</span> and documentation. Utilized tools like <span class="font-medium">Moment.js</span> for date operations, <span class="font-medium">JIRA</span> and <span class="font-medium">Trello</span> for bug tracking, and optimized performance to enhance user experience across devices and browsers.</p>`,
+    timeline: "Jul 2019 - Oct 2021",
+  },
+  {
+    designation: "Service Executive - Cataloger ",
+    company_name:
+      "Prione Business Services Limited (A Catamaran and Amazon Joint Venture)",
+    location: "Bangalore",
+    description: `<p>Collected and enhanced <span class="font-medium">product information</span> according to <span class="font-medium">Amazon guidelines</span> to improve <span class="font-medium">clarity</span> and <span class="font-medium">customer appeal</span>. Took ownership as <span class="font-medium">QC point of contact</span>, efficiently resolving <span class="font-medium">escalations</span> and ensuring <span class="font-medium">timely file uploads</span>. Contributed to <span class="font-medium">process improvement</span> by analyzing <span class="font-medium">approval delays</span> and performed both <span class="font-medium">execution</span> and <span class="font-medium">quality checks</span> to maintain <span class="font-medium">high accuracy</span> and reduce <span class="font-medium">error rates</span>.</p>`,
+    timeline: "Jun 2015 - Feb 2018",
+  },
+];

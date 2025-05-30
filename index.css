@@ -8,12 +8,17 @@
   --font-allura: "Allura", cursive;
   --font-raleway: "Raleway", sans-serif;
 
-  --color-brown-200: #f6e9d5;
-  --color-brown-400: #eaddca;
-  --color-brown-600: #c19a6b;
-  --color-brown-800: #92612c;
-  --color-brown: #7b3f00;
-  --color-dark-brown: #4f2901;
+  --color-wineberry-50: #f0e9ed;
+  --color-wineberry-100: #e2d4db;
+  --color-wineberry-200: #d4bec9;
+  --color-wineberry-300: #c6a9b7;
+  --color-wineberry-400: #b893a6;
+  --color-wineberry-500: #a97e94;
+  --color-wineberry-600: #9b6882;
+  --color-wineberry-700: #8d5270;
+  --color-wineberry-800: #7f3d5e;
+  --color-wineberry-900: #71284d;
+  --color-wineberry-950: #652445;
 
   --animate-fadeIn: fadeIn ease 4s;
   --animate-typewrite: typewrite 3s steps(24) 1s 1 normal both;
@@ -79,7 +84,7 @@ a,
 }
 
 .section-height {
-  @apply min-h-[80vh] lg:h-screen;
+  @apply  lg:h-screen;
 }
 
 .nav-list > li {
@@ -87,7 +92,7 @@ a,
 }
 
 .nav-link:hover {
-  @apply text-brown transform pb-1 transition-all ease-in-out duration-300;
+  @apply text-wineberry-900 transform pb-1 transition-all ease-in-out duration-300;
 }
 
 .menu-link {
@@ -95,11 +100,11 @@ a,
 }
 
 .menu-link:hover {
-  @apply bg-brown-200 text-brown transform scale-104;
+  @apply bg-wineberry-200 text-wineberry-900 transform scale-104;
 }
 
 .active-menu-link {
-  @apply text-brown border-l-2 border-brown-600;
+  @apply text-wineberry-900 border-l-2 border-wineberry-600;
 }
 
 section {
@@ -107,12 +112,12 @@ section {
 }
 
 .section-heading {
-  @apply text-3xl md:text-4xl xl:text-5xl font-medium;
+  @apply text-3xl md:text-4xl xl:text-5xl font-medium text-wineberry-950;
 }
 
 .contact-link:hover,
 .contact-link:focus {
-  @apply underline text-dark-brown decoration-dark-brown underline-offset-10;
+  @apply underline text-wineberry-950 decoration-wineberry-950 underline-offset-10;
 }
 
 .btn {
