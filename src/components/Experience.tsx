@@ -30,7 +30,7 @@ const Experience = () => {
                   <div className="w-9/12 sm:w-10/12">
                     <div
                       onClick={() => setShowStep(index)}
-                      className="cursor-pointer hover:bg-wineberry-50 rounded-xl px-4 py-2"
+                      className="cursor-pointer hover:bg-wineberry-50 rounded-xl px-2 md:px-4 py-2"
                     >
                       <p className="text-sm md:text-base font-semibold">
                         {list.designation}
