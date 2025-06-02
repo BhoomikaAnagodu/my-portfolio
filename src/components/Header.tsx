@@ -78,25 +78,23 @@ const Header = () => {
             Bhoomika Anagodu
           </div>
           <ul className="lg:flex items-center lg:gap-6 xl:gap-8 nav-list">
-            {NAV_ITEMS.map((item) => {
-              return (
-                <li key={item.label} className="nav-link cursor-pointer">
-                  <p
-                    className={
-                      activeNavItem === item.value
-                        ? "text-wineberry-900 underline decoration-wineberry-400 underline-offset-10"
-                        : ""
-                    }
-                    onClick={() => {
-                      setActiveNavItem(item.value);
-                      scrollToElement(item.value);
-                    }}
-                  >
-                    {item.label}
-                  </p>
-                </li>
-              );
-            })}
+            {NAV_ITEMS.map((item) => (
+              <li key={item.label} className="nav-link cursor-pointer">
+                <p
+                  className={
+                    activeNavItem === item.value
+                      ? "text-wineberry-900 underline decoration-wineberry-400 underline-offset-10"
+                      : ""
+                  }
+                  onClick={() => {
+                    setActiveNavItem(item.value);
+                    scrollToElement(item.value);
+                  }}
+                >
+                  {item.label}
+                </p>
+              </li>
+            ))}
           </ul>
         </nav>
 
@@ -114,27 +112,25 @@ const Header = () => {
             </div>
             {openMenu && (
               <ul className="absolute right-0 bg-white shadow-menu rounded-xl w-fit overflow-hidden xxs:my-4 xs:my-4 md:my-6 z-120 p-2">
-                {NAV_ITEMS.map((item) => {
-                  return (
-                    <li
-                      key={item.label}
-                      className="menu-link cursor-pointer"
-                      onClick={() => {
-                        setActiveNavItem(item.value);
-                        scrollToElement(item.value);
-                        toggleMenu();
-                      }}
+                {NAV_ITEMS.map((item) => (
+                  <li
+                    key={item.label}
+                    className="menu-link cursor-pointer"
+                    onClick={() => {
+                      setActiveNavItem(item.value);
+                      scrollToElement(item.value);
+                      toggleMenu();
+                    }}
+                  >
+                    <p
+                      className={`${
+                        activeNavItem === item.value ? "active-menu-link" : ""
+                      } px-2`}
                     >
-                      <p
-                        className={`${
-                          activeNavItem === item.value ? "active-menu-link" : ""
-                        } px-2`}
-                      >
-                        {item.label}
-                      </p>
-                    </li>
-                  );
-                })}
+                      {item.label}
+                    </p>
+                  </li>
+                ))}
               </ul>
             )}
           </div>

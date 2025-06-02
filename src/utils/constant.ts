@@ -10,6 +10,7 @@ import CSS3_Icon from "../assets/tech-stack/CSS3.svg";
 import Redux_Icon from "../assets/tech-stack/Redux.svg";
 import Tailwind_Icon from "../assets/tech-stack/Tailwind_CSS.svg";
 import Vite_Icon from "../assets/tech-stack/Vite.svg";
+import Parcel_Icon from "../assets/tech-stack/parcel.png";
 import Bootstrap_Icon from "../assets/tech-stack/Bootstrap.svg";
 import Material_UI_Icon from "../assets/tech-stack/Material_UI.svg";
 import Storybook_Icon from "../assets/tech-stack/Storybook.svg";
@@ -37,6 +38,10 @@ export const NAV_ITEMS = [
   {
     label: "Skills",
     value: "skills",
+  },
+  {
+    label: "Projects",
+    value: "projects",
   },
   {
     label: "Contact",
@@ -94,6 +99,10 @@ export const TECH_STACK = [
   {
     icon: Tailwind_Icon,
     name: "Tailwind CSS",
+  },
+  {
+    icon: Parcel_Icon,
+    name: "Parcel",
   },
   {
     icon: Vite_Icon,
@@ -182,5 +191,17 @@ export const EXPERIENCE_LIST = [
     location: "Bangalore",
     description: `<p>Collected and enhanced <span class="font-medium">product information</span> according to <span class="font-medium">Amazon guidelines</span> to improve <span class="font-medium">clarity</span> and <span class="font-medium">customer appeal</span>. Took ownership as <span class="font-medium">QC point of contact</span>, efficiently resolving <span class="font-medium">escalations</span> and ensuring <span class="font-medium">timely file uploads</span>. Contributed to <span class="font-medium">process improvement</span> by analyzing <span class="font-medium">approval delays</span> and performed both <span class="font-medium">execution</span> and <span class="font-medium">quality checks</span> to maintain <span class="font-medium">high accuracy</span> and reduce <span class="font-medium">error rates</span>.</p>`,
     timeline: "Jun 2015 - Feb 2018",
+  },
+];
+
+export const PROJECTS_LISTING = [
+  {
+    name: "Good Food",
+    image: "/src/assets/projects/Good_Food.png",
+    description:
+      "A streamlined food delivery web app featuring restaurant listings, detailed restaurant pages, and an intuitive cart experience.",
+    tech_stack: ["React", "Redux", "Parcel", "Tailwind CSS"],
+    github_link: "https://github.com/BhoomikaAnagodu/GoodFood",
+    live_website_link: "https://goodf00d.netlify.app/",
   },
 ];

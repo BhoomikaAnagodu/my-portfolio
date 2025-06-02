@@ -84,7 +84,7 @@ a,
 }
 
 .section-height {
-  @apply  lg:h-screen;
+  @apply lg:h-screen;
 }
 
 .nav-list > li {
