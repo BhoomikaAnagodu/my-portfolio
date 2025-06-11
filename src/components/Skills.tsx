@@ -22,6 +22,7 @@ const Skills = () => {
                   src={stack.icon}
                   alt={`${stack.name} Icon`}
                   className="w-5"
+                  loading="lazy"
                 />
                 <p className="text-base md:text-lg px-2">{stack.name}</p>
               </div>

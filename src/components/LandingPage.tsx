@@ -1,4 +1,4 @@
-import ProfilePic from "../assets/profile_pic.png";
+import ProfilePic from "../assets/profile_pic.webp";
 import LinkedinIcon from "../assets/linkedin.png";
 import GitHubIcon from "../assets/github.png";
 

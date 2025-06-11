@@ -1,9 +1,11 @@
-import { useState } from "react";
+import React, { useState } from "react";
+
+const Modal = React.lazy(() => import("./Modal"));
+
 import Code from "../assets/code.svg";
 import UpArrow from "../assets/up-arrow.svg";
 
 import { PROJECTS_LISTING } from "../utils/constant";
-import Modal from "./Modal";
 import { isMobile } from "../utils/utils";
 
 const ProjectDetails = ({
