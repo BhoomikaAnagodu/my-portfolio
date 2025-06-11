@@ -21,6 +21,8 @@ import Docker_Icon from "../assets/tech-stack/Docker.svg";
 import Confluence_Icon from "../assets/tech-stack/Confluence.svg";
 import CircleCI_Icon from "../assets/tech-stack/CircleCI.svg";
 import Ant_Design_Icon from "../assets/tech-stack/Ant_Design.svg";
+import Good_Food from "../assets/projects/Good_Food.png";
+import Photo_Log from "../assets/projects/Photo_Log.png";
 
 export const NAV_ITEMS = [
   {
@@ -197,7 +199,7 @@ export const EXPERIENCE_LIST = [
 export const PROJECTS_LISTING = [
   {
     name: "Good Food",
-    image: "/src/assets/projects/Good_Food.png",
+    image: Good_Food,
     description:
       "A streamlined food delivery web app featuring restaurant listings, detailed restaurant pages, and an intuitive cart experience.",
     tech_stack: ["React", "Redux", "Parcel", "Tailwind CSS"],
@@ -206,7 +208,7 @@ export const PROJECTS_LISTING = [
   },
   {
     name: "Photo Log",
-    image: "/src/assets/projects/Photo_Log.png",
+    image: Photo_Log,
     description:
       "A intuitive photo search app that helps you find stunning, high-resolution images in seconds. Browse through millions of beautiful, royalty-free photos curated from talented photographers around the world.",
     tech_stack: ["React", "Vite", "Tailwind CSS", "Firebase Auth"],

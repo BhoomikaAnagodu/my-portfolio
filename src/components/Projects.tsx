@@ -65,8 +65,6 @@ const Projects = () => {
     }
   };
 
-  console.log("selectedProject", selectedProject);
-
   return (
     <div className="main-container mx-auto snap-always snap-center">
       <section
