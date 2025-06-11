@@ -5,3 +5,5 @@ export const scrollToElement = (id: string) => {
     element.scrollIntoView({ behavior: "smooth" });
   }
 };
+
+export const isMobile = () => window.innerWidth < 1024;

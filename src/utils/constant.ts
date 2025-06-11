@@ -204,4 +204,13 @@ export const PROJECTS_LISTING = [
     github_link: "https://github.com/BhoomikaAnagodu/GoodFood",
     live_website_link: "https://goodf00d.netlify.app/",
   },
+  {
+    name: "Photo Log",
+    image: "/src/assets/projects/Photo_Log.png",
+    description:
+      "A intuitive photo search app that helps you find stunning, high-resolution images in seconds. Browse through millions of beautiful, royalty-free photos curated from talented photographers around the world.",
+    tech_stack: ["React", "Vite", "Tailwind CSS", "Firebase Auth"],
+    github_link: "https://github.com/BhoomikaAnagodu/photoLog",
+    live_website_link: "https://photol0g.netlify.app/",
+  },
 ];

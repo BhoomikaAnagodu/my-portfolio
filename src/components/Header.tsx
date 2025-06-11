@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
-import { scrollToElement } from "../utils/utils";
+import { isMobile, scrollToElement } from "../utils/utils";
 import { NAV_ITEMS } from "../utils/constant";
 
 import Hamburger_Menu from "../assets/hamburger-menu.png";
@@ -35,7 +35,6 @@ const Header = () => {
   }, [openMenu]);
 
   useEffect(() => {
-    const isMobile = window.innerWidth < 1024;
     const scrollTarget = isMobile
       ? window
       : document.getElementById("scroll-container");
