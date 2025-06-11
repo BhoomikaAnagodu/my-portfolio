@@ -9,14 +9,14 @@ const LandingPage = () => {
         id="home"
         className="py-[15vh] min-h-[70vh] section-height grid md:grid-cols-1 gap-15 lg:gap-0 lg:flex"
       >
-        <div className="lg:w-1/2 my-auto md:mx-auto">
+        <div className="lg:w-4/9 my-auto md:mx-auto">
           <img
             src={ProfilePic}
-            className="xxs:w-3/4 xs:w-4/6 md:w-7/12 lg:w-3/4 xl:w-3/4 mx-auto"
+            className="xxs:w-3/5 xs:w-3/6 md:w-5/12 lg:w-6/8 mx-auto"
             alt="Bhoomika Anagodu Profile Picture"
           />
         </div>
-        <div className="lg:w-1/2 lg:my-auto text-center">
+        <div className="lg:w-5/9 lg:my-auto text-center">
           <p className="font-medium">Hello, I'm</p>
           <h1 className="text-4xl md:text-5xl lg:text-[45px] xl:text-6xl font-semibold my-2 opacity-90 animate-fadeIn">
             Bhoomika Anagodu
