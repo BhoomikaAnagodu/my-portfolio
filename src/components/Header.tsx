@@ -107,7 +107,7 @@ const Header = () => {
           </div>
           <div className="relative" ref={menuRef}>
             <div className="w-7 md:w-8 cursor-pointer" onClick={toggleMenu}>
-              <img src={Hamburger_Menu} />
+              <img src={Hamburger_Menu} alt="hamburger menu icon" />
             </div>
             {openMenu && (
               <ul className="absolute right-0 bg-white shadow-menu rounded-xl w-fit overflow-hidden xxs:my-4 xs:my-4 md:my-6 z-120 p-2">

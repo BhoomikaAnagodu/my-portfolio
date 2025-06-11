@@ -13,7 +13,7 @@ const Experience = () => {
         <p className="font-medium xxs:text-xs sm:text-sm md:text-base my-1">
           The path I’ve paved
         </p>
-        <h1 className="section-heading">My Experience</h1>
+        <h3 className="section-heading">My Experience</h3>
         <div className="w-9/12 lg:w-10/12 ml-20 sm:mx-auto my-6 text-left">
           <ul className="border-l-2 border-wineberry-900">
             {EXPERIENCE_LIST.map((list, index) => (

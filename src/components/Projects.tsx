@@ -43,14 +43,14 @@ const ProjectDetails = ({
             target="_blank"
             className="hover:opacity-40 hover:scare-90"
           >
-            <img src={Code} className="w-5" />
+            <img src={Code} alt="code icon" className="w-5" />
           </a>
           <a
             href={project.live_website_link}
             target="_blank"
             className="hover:opacity-40 hover:scare-90"
           >
-            <img src={UpArrow} className="w-5 rotate-45" />
+            <img src={UpArrow} alt="up arrow icon" className="w-5 rotate-45" />
           </a>
         </div>
       </div>

@@ -21,8 +21,8 @@ import Docker_Icon from "../assets/tech-stack/Docker.svg";
 import Confluence_Icon from "../assets/tech-stack/Confluence.svg";
 import CircleCI_Icon from "../assets/tech-stack/CircleCI.svg";
 import Ant_Design_Icon from "../assets/tech-stack/Ant_Design.svg";
-import Good_Food from "../assets/projects/Good_Food.png";
-import Photo_Log from "../assets/projects/Photo_Log.png";
+import Good_Food from "../assets/projects/Good_Food.webp";
+import Photo_Log from "../assets/projects/Photo_Log.webp";
 
 export const NAV_ITEMS = [
   {

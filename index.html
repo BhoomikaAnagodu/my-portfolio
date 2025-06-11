@@ -10,8 +10,21 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Allura&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
+      rel="preload"
+      as="style"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Allura&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Allura&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      />
+    </noscript>
   </head>
   <body class="font-raleway bg-stone-50 text-zinc-900 tracking-wide text-base">
     <div id="root"></div>
