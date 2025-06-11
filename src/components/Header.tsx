@@ -35,7 +35,7 @@ const Header = () => {
   }, [openMenu]);
 
   useEffect(() => {
-    const scrollTarget = isMobile
+    const scrollTarget = isMobile()
       ? window
       : document.getElementById("scroll-container");
 
