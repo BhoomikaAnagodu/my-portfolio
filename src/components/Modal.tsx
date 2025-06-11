@@ -1,5 +1,4 @@
 import { useEffect, useRef } from "react";
-import Close from "../assets/close.svg";
 
 interface ModalProps {
   children: React.ReactNode;
