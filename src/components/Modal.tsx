@@ -31,12 +31,6 @@ const Modal = ({ children, onClose }: ModalProps) => {
         ref={modalRef}
         className="relative m-4 p-4 rounded-lg bg-white shadow-sm"
       >
-        <img
-          src={Close}
-          className="w-5 absolute right-5 top-5 cursor-pointer"
-          onClick={onClose}
-          alt="Close modal"
-        />
         {children}
       </div>
     </div>
