@@ -1,7 +1,3 @@
-import React, { useState } from "react";
-
-const Modal = React.lazy(() => import("./Modal"));
-
 import Code from "../assets/code.svg";
 import UpArrow from "../assets/up-arrow.svg";
 
@@ -21,9 +17,13 @@ const ProjectDetails = ({
   };
 }) => {
   return (
-    <div className="cursor-default lg:bg-wineberry-50/90 h-full backdrop-blur-lg lg:opacity-0 lg:absolute lg:-bottom-10 w-full transition-all duration-500 lg:rounded-xl">
+    <div
+      className={`cursor-default lg:bg-wineberry-50/90 h-full backdrop-blur-lg lg:opacity-0 lg:absolute lg:-bottom-10 w-full transition-all duration-500 ${
+        isMobile ? "" : "lg:rounded-xl"
+      } `}
+    >
       <div className="text-wineberry-900 text-left p-4 py-6">
-        <h3 className="text-xl font-semibold text-wineberry-900 text-shadow-2md">
+        <h3 className="text-xl font-semibold text-wineberry-900">
           {project.name}
         </h3>
         <p className="text-sm my-2 text-wineberry-800">{project.description}</p>
@@ -59,14 +59,6 @@ const ProjectDetails = ({
 };
 
 const Projects = () => {
-  const [selectedProject, setSelectedProject] = useState<number | null>(null);
-
-  const toggleModal = (index: number) => {
-    if (isMobile()) {
-      setSelectedProject((prev) => (prev === index ? null : index));
-    }
-  };
-
   return (
     <div className="main-container mx-auto snap-always snap-center">
       <section
@@ -77,22 +69,27 @@ const Projects = () => {
           Ideas brought to life
         </p>
         <h1 className="section-heading">My Projects</h1>
-        <div className="w-10/12 lg:w-full xl:w-10/12 mx-auto grid lg:grid-cols-2 gap-10 my-8">
+        <div
+          className={`w-10/12 lg:w-full xl:w-10/12 mx-auto grid lg:grid-cols-2 my-8 ${
+            isMobile ? "" : "gap-10"
+          }`}
+        >
           {PROJECTS_LISTING.map((project, index) => (
-            <div
-              key={`${project.name}_${index}`}
-              onClick={() => toggleModal(index)}
-              className="lg:hover:[&>div]:opacity-100 lg:hover:[&>div]:bottom-0 relative bg-cover bg-center w-full h-50 xs:h-60 md:h-85 lg:h-70 rounded-xl cursor-pointer"
-              style={{ backgroundImage: `url(${project.image})` }}
-            >
-              {!isMobile() && <ProjectDetails project={project} />}
-              <div onClick={(e) => e.stopPropagation()}>
-                {selectedProject === index && (
-                  <Modal onClose={() => setSelectedProject(null)}>
-                    <ProjectDetails project={project} />
-                  </Modal>
-                )}
+            <div className={`${isMobile ? "shadow-menu mb-10" : ""}`}>
+              <div
+                key={`${project.name}_${index}`}
+                className={`lg:hover:[&>div]:opacity-100 lg:hover:[&>div]:bottom-0 relative bg-cover bg-center w-full h-48 xs:h-60 md:h-85 lg:h-70 ${
+                  isMobile ? "" : "rounded-xl cursor-pointer"
+                }`}
+                style={{ backgroundImage: `url(${project.image})` }}
+              >
+                {!isMobile && <ProjectDetails project={project} />}
               </div>
+              {isMobile && (
+                <div>
+                  <ProjectDetails project={project} />
+                </div>
+              )}
             </div>
           ))}
         </div>

@@ -35,7 +35,7 @@ const Header = () => {
   }, [openMenu]);
 
   useEffect(() => {
-    const scrollTarget = isMobile()
+    const scrollTarget = isMobile
       ? window
       : document.getElementById("scroll-container");
 
@@ -102,7 +102,7 @@ const Header = () => {
           id="hamburger-nav"
           className="relative flex justify-between items-center w-11/12 md:w-10/12 mx-auto lg:hidden xl:hidden h-12 md:h-16"
         >
-          <div className="font-allura text-wineberry-950 xxs:text-xl xs:text-2xl md:text-3xl cursor-default">
+          <div className="font-allura text-wineberry-950 text-2xl md:text-3xl cursor-default">
             Bhoomika
           </div>
           <div className="relative" ref={menuRef}>

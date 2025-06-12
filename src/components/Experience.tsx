@@ -29,7 +29,7 @@ const Experience = () => {
                 <div className="w-9/12 sm:w-10/12">
                   <div
                     onClick={() => setShowStep(index)}
-                    className="cursor-pointer hover:bg-wineberry-50 rounded-xl px-2 md:px-4 py-2"
+                    className="cursor-pointer hover:bg-wineberry-50 rounded-xl px-1 md:px-4 py-2"
                   >
                     <p className="text-sm md:text-base font-semibold">
                       {list.designation}
@@ -39,7 +39,7 @@ const Experience = () => {
                     </p>
                   </div>
                   <div
-                    className={`text-sm md:text-base px-2 py-1 md:px-4 md:py-2 overflow-hidden transition-all ease-in-out duration-700 ${
+                    className={`text-sm md:text-base px-1 py-1 md:px-4 md:py-2 overflow-hidden transition-all ease-in-out duration-700 ${
                       showStep === index
                         ? "xxs:max-h-[530px] xs:max-h-[430px] md:max-h-[320px] lg:max-h-[250px] xl:max-h-[170px]"
                         : "max-h-0 opacity-0"
