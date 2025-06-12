@@ -103,7 +103,7 @@ const Header = () => {
           className="relative flex justify-between items-center w-11/12 md:w-10/12 mx-auto lg:hidden xl:hidden h-12 md:h-16"
         >
           <div className="font-allura text-wineberry-950 xxs:text-xl xs:text-2xl md:text-3xl cursor-default">
-            Bhoomi
+            Bhoomika
           </div>
           <div className="relative" ref={menuRef}>
             <div className="w-7 md:w-8 cursor-pointer" onClick={toggleMenu}>
