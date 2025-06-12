@@ -119,10 +119,6 @@ export const TECH_STACK = [
     name: "Material UI",
   },
   {
-    icon: Storybook_Icon,
-    name: "Storybook",
-  },
-  {
     icon: GraphQL_Icon,
     name: "GraphQL",
   },
