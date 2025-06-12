@@ -173,7 +173,7 @@ export const EXPERIENCE_LIST = [
     company_name: "Xebia IT Architects India Private Limited",
     location: "Bangalore",
     description: `<p>As a Frontend Developer, built <span class="font-medium">reusable React components</span> using <span class="font-medium">TypeScript</span> and <span class="font-medium">Redux</span>. Delivered key features such as a <span class="font-medium">global calendar</span> to enhance <span class="font-medium">user engagement</span>, optimized <span class="font-medium">application performance</span>, and fixed <span class="font-medium">critical bugs</span>. Mentored <span class="font-medium">junior developers</span> and contributed to efficient, high-quality product delivery in <span class="font-medium">Agile environments</span>.</p>`,
-    timeline: "Nov 2021 - Mar 2024",
+    timeline: "Nov 2021 - Mar 2022",
   },
   {
     designation: "React Developer",
