@@ -6,6 +6,7 @@
 
 # Get in Touch
 
+🌐 Portfolio: https://bhoomika-anagodu.netlify.app/ <br />
 💼 LinkedIn: https://www.linkedin.com/in/bhoomika-anagodu/ <br />
 📧 Email: bhoomika.anagodu@gmail.com
 
