@@ -1,6 +1,6 @@
 # About Me
    
-💡 I build interfaces people actually want to use. I care about clean code, pixel-perfect UI, and smooth UX <br />
+💡 I care about clean code, pixel-perfect UI, and smooth UX <br />
 🌱 Always learning — lately exploring [e.g. Nodejs, MongoDB, Web Accessibility] <br />
 📍 Based in Augsburg, Germany
 
