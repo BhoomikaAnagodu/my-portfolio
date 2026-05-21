@@ -8,6 +8,10 @@ import TypeScript_Icon from "../assets/tech-stack/TypeScript.svg";
 import HTML5_Icon from "../assets/tech-stack/HTML5.svg";
 import CSS3_Icon from "../assets/tech-stack/CSS3.svg";
 import Redux_Icon from "../assets/tech-stack/Redux.svg";
+import NodeJs_Icon from "../assets/tech-stack/Nodejs.svg";
+import Express_Icon from "../assets/tech-stack/Express.svg";
+import MongoDB_Icon from "../assets/tech-stack/MongoDB.svg";
+import Mongoose_Icon from "../assets/tech-stack/Mongoose.svg";
 import Tailwind_Icon from "../assets/tech-stack/Tailwind_CSS.svg";
 import Vite_Icon from "../assets/tech-stack/Vite.svg";
 import Parcel_Icon from "../assets/tech-stack/parcel.png";
@@ -55,7 +59,7 @@ export const ABOUT_CARD_ITEMS = [
   {
     icon: Experience_Icon,
     heading: "Experience",
-    desc: "5+ years Frontend Development",
+    desc: "6+ years Frontend Development",
   },
   {
     icon: Education_Icon,
@@ -97,6 +101,22 @@ export const TECH_STACK = [
   {
     icon: Redux_Icon,
     name: "Redux",
+  },
+  {
+    icon: NodeJs_Icon,
+    name: "Nodejs",
+  },
+  {
+    icon: Express_Icon,
+    name: "Express",
+  },
+  {
+    icon: MongoDB_Icon,
+    name: "MongoDB",
+  },
+  {
+    icon: Mongoose_Icon,
+    name: "Mongoose.js",
   },
   {
     icon: Tailwind_Icon,
