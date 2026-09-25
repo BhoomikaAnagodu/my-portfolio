@@ -174,6 +174,13 @@ export const TECH_STACK = [
 
 export const EXPERIENCE_LIST = [
   {
+    designation: "Professional Development",
+    company_name: "Career Break",
+    location: "Augsburg, DE",
+    description: `<p>Built and shipped complete applications (PhotoLog, Good Food) end-to-end, owning architecture, complex UI layouts including Masonry, state management with Redux and Context, and production deployment. Currently expanding backend proficiency in Node.js to deliver robust, end-to-end full stack solutions. Learned Firebase for secure authentication and persistent data layers, and automated deployments via CI/CD pipelines (GitHub AcPons & Netlify). Adopted AI-assisted development workflows (Claude Code, GitHub Copilot) to accelerate delivery, building the judgement to know when AI-generated code can be trusted and when it needs manual intervention. Relocated to Augsburg and enrolled in an intensive integration course working toward B1 German proficiency.</p>`,
+    timeline: "Dec 2024 - Present",
+  },
+  {
     designation: "Senior Software Engineer",
     company_name: "Walmart Global Technology Services India Private Limited",
     location: "Bangalore",

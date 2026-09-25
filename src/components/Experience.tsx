@@ -41,7 +41,7 @@ const Experience = () => {
                   <div
                     className={`text-sm md:text-base px-1 py-1 md:px-4 md:py-2 overflow-hidden transition-all ease-in-out duration-700 ${
                       showStep === index
-                        ? "xxs:max-h-[530px] xs:max-h-[430px] md:max-h-[320px] lg:max-h-[250px] xl:max-h-[170px]"
+                        ? "xxs:max-h-[580px] xs:max-h-[490px] md:max-h-[380px] lg:max-h-[320px] xl:max-h-[230px]"
                         : "max-h-0 opacity-0"
                     }`}
                     dangerouslySetInnerHTML={{ __html: list.description }}
